@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SemanticUI 集合</title>
+    <link rel="stylesheet" href="../static/js/Semantic-UI-2.4.1/dist/semantic.min.css">
+</head>
+<body>
+<div class="ui container" style="padding: 50px">
+    <h2 class="ui dividing header">Message</h2>
+
+    <div class="ui message">
+        <div class="header">课程发布</div>
+        <p>我们发布了SemanticUi课程</p>
+    </div>
+    <div class="ui compact message">
+        <div class="header">课程发布</div>
+        <p>我们发布了SemanticUi课程</p>
+    </div>
+
+    <div class="ui icon message">
+        <i class="info icon"></i>
+        <div class="content">
+            <div class="header">课程</div>
+            <p>我们发布了SemanticUi课程</p>
+        </div>
+    </div>
+
+    <div class="ui divider"></div>
+    <div class="ui positive message">
+        <div class="header">课程发布</div>
+        <p>我们发布了SemanticUi课程</p>
+    </div>
+    <div class="ui negative message">
+        <div class="header">课程发布</div>
+        <p>我们发布了SemanticUi课程</p>
+    </div>
+    <div class="ui info message">
+        <div class="header">课程发布</div>
+        <p>我们发布了SemanticUi课程</p>
+    </div>
+
+    <div class="ui divider"></div>
+    <div class="ui positive message">
+        <i class="close icon"></i>
+        <div class="header">课程发布</div>
+        <p>我们发布了SemanticUi课程</p>
+    </div>
+
+    <div class="ui dividing">表单</div>
+    <form class="ui form">
+        <div class="field">
+            <label>姓名</label>
+            <input type="text">
+        </div>
+        <div class="field">
+            <label>电话</label>
+            <input type="text">
+        </div>
+        <button type="submit" class="ui button">提交</button>
+    </form>
+    <div class="ui divider"></div>
+    <form action="#" class="ui form error">
+        <div class="ui error message">
+            <i class="close icon"></i>
+            <div class="header">不好意思</div>
+            <p>。。。。。</p>
+        </div>
+        <div class="ui warning message">
+            <i class="close icon"></i>
+            <div class="header">不好意思</div>
+            <p>。。。。。</p>
+        </div>
+        <div class="ui success message">
+            <i class="close icon"></i>
+            <div class="header">不好意思</div>
+            <p>。。。。。</p>
+        </div>
+        <div class="fields">
+            <div class="required field">
+                <label>姓名</label>
+                <input type="text">
+            </div>
+            <div class="field">
+                <label>电话</label>
+                <input type="text">
+            </div>
+            <div class="field">
+                <label>国家</label>
+                <select name="" id="" class="ui dropdown">
+                    <option value="CN">中国</option>
+                    <option value="US">美国</option>
+                </select>
+            </div>
+        </div>
+        <button type="submit" class="ui info button">提交</button>
+    </form>
+</div>
+
+<script src="../static/js/jquery.min.js"></script>
+<script src="../static/js/Semantic-UI-2.4.1/dist/semantic.min.js"></script>
+<script>
+    $('.message.close').click(function () {
+        $(this).closest('.message').transition('fade');
+    });
+
+    $('.select.dropdown').dropdown();
+</script>
+</body>
+</html>

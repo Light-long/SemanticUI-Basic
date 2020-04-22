@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../static/js/Semantic-UI-2.4.1/dist/semantic.min.css">
+</head>
+<body>
+    <div class="ui container">
+        <h2 class="ui dividing header">Container</h2>
+        <p>hah </p>
+        <div class="ui divider"></div>
+        <div class="ui grid">
+            <div class="four wide column">
+                <div class="ui red statistic">
+                    <div class="value">1</div>
+                </div>
+            </div>
+            <div class="six wide column">
+                <div class="ui red statistic">
+                    <div class="value">1</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="ui divider"></div>
+        <div class="ui dropdown">
+            课程 <i class="dropdown icon"></i>
+            <div class="menu">
+                <div class="item">HTML</div>
+                <div class="item">CSS</div>
+                <div class="item">JavaScript</div>
+            </div>
+        </div>
+        <hr>
+        <div class="ui selection dropdown">
+            <span class="text">课程</span>
+            <i class="dropdown icon"></i>
+            <div class="menu">
+                <div class="item">HTML</div>
+                <div class="item">CSS</div>
+                <div class="item">JavaScript</div>
+            </div>
+        </div>
+        <div class="ui divider"></div>
+        <div class="ui pointing dropdown labeled icon button">
+            <i class="angle down icon"></i>
+            <span class="text">选择课程</span>
+            <div class="menu">
+                <div class="ui icon search input">
+                    <i class="search icon"></i>
+                    <input type="text" placeholder="搜索">
+                </div>
+                <div class="item" data-value="html">HTML</div>
+                <div class="item" data-value="css">CSS</div>
+                <div class="item" data-value="javascript">JavaScript</div>
+            </div>
+        </div>
+        <div class="ui divider"></div>
+        <div class="ui progress">
+            <div class="bar" style="width: 30%">
+                <div class="progress">30%</div>
+            </div>
+            <div class="label">
+                上传文件
+            </div>
+        </div>
+        <div class="ui divider"></div>
+        <div class="ui progress" id="upload">
+            <div class="bar">
+                <div class="progress"></div>
+            </div>
+            <div class="label">
+                上传文件
+            </div>
+        </div>
+        <div class="ui section divider"></div>
+        <div class="ui icon labeled button" data-content="19809407955" id="wechat">
+            <i class="wechat icon"></i>
+            <label>WeChat</label>
+        </div>
+
+        <div class="ui section divider"></div>
+        <div class="ui icon info message">
+            <i class="close icon"></i>
+            <i class="info icon"></i>
+            <div class="content">
+                <div class="header">课程发布</div>
+                <p>Semantic UI的新课程发布了</p>
+            </div>
+        </div>
+    </div>
+
+<script src="../static/js/jquery.min.js"></script>
+<script src="../static/js/Semantic-UI-2.4.1/dist/semantic.min.js"></script>
+    <script>
+        $('.ui.dropdown').dropdown({
+            on: 'hover',
+            transition: 'swing right',
+        });
+        $("#upload").progress({
+            percent: 50,
+            total: 10
+        });
+        $('#wechat').popup();
+        $('.message .close').click(function () {
+            $(this).closest('.message').transition('fly');
+        });
+    </script>
+</body>
+</html>
